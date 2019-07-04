@@ -1,0 +1,983 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Menorah Restaurant</title>
+	<link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/jpg">
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+
+
+	<!-- font-awesome cdn -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!-- bootstarp cdn -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+
+		p{
+			font-size: 16px;
+		}
+		.prepend-top{
+			font-size: 18px;
+		}
+
+		.append-0{
+			font-size: 18px;
+			margin-top:12px;
+		}
+
+		.contents{
+			font-size: 19px;
+			padding:1px;
+		}
+		.arrow-up{
+			color:#ed690b;
+		}
+		.st1
+		{
+			font-weight: 500;
+			color:black;
+		}
+		strong{
+			color:#cc0000;
+			font-weight: 600;
+		}
+		h5{
+			color: green;
+		}
+		#icon{
+			width:50px;
+			height:50px;
+			margin: 2px;
+
+		}
+		h1 #icon{
+			margin-top: -8px;
+		}
+		.center span
+		{
+			padding:5px;
+		}
+
+		b{
+			color:#006666;
+			font-weight: 645;
+			font-size: 18px;
+		}
+		
+		body{
+			background-image: url("assets/img/background.png");
+			 background-attachment: fixed;
+		}
+
+
+
+		
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h4 class="center alt" style="color: green;font-weight: bold;font-size:20px;">&ldquo;Menorah Restaurant&rdquo; Documentation by &ldquo;digisamaritan&rdquo; v1.0</h4>
+		
+		<hr>
+		
+	 <h1 class= "center" style="color:#bc0909;">&ldquo;<img src="assets/img/favicon.jpg" id= "icon"/>Menorah Restaurant&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-12 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong class="st1">
+					Created By: Digisamaritan<br>
+					URL: <a href="https://digisamaritan.com/" target="_blank">digisamaritan.com</a><br>
+					Email: digisamaritan@gmail.com<br>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my Project. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here&nbsp;<a href="https://digisamaritan.com/contact-us/" target="_blank" class="btn btn-primary">Click Here</button></a>&nbsp;Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt" style="color:#860d9b;font-weight: bold;">Table of Contents</h2>
+		<ol class="numeric contents">
+			<li><a href="#requirments">Requirments</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#admindashboard">admin Dashboard</a></li>
+			<li><a href="#menu">Menu</a></li>
+			<li><a href="#items">Items</a></li>
+			<li><a href="#addons">Add-ons</a></li>
+			<li><a href="#options">Options</a></li>
+			<li><a href="#itemtypes">Item Types</a></li>
+			<li><a href="#offers">Offers</a></li>
+			<li><a href="#users">Users</a></li>
+			<li><a href="#customers">Customers</a></li>
+			<li><a href="#orders">Orders</a></li>
+			<li><a href="#languagesettings">Language Settings</a></li>
+			<li><a href="#loyalitypoints">Loyality Points</a></li>
+			<li><a href="#referralsettings">Referral Settings</a></li>
+			<li><a href="#locationmaster">Location Master</a></li>
+			<li><a href="#mastersettings">Master Settings</a></li>
+			<li><a href="#reports">Reports</a></li>
+			<li><a href="#pages">Pages</a></li>
+			<li><a href="#faqs">FAQS</a></li>
+			<li><a href="#kitchenmanager">Kitchen Manager</a></li>
+			<li><a href="#deliverymanager">Delivery Manager</a></li>
+			<li><a href="#userdashboard">User Dashboard</a></li>
+			<li><a href="#bookanorder">Book an Order</a></li>
+			<li><a href="#myorders">My Orders</a></li>
+			<li><a href="#mypoints">My Points</a></li>
+			<li><a href="#myaddresses">My Addresses</a></li>
+			<li><a href="#changepassword">Change Password</a></li>
+			
+		</ol>
+		
+		<hr>
+		
+		<h4 id="requirments">A)&nbsp;<strong>Requirements</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up arrow-up"></i>top</a></h4>
+		<b>PHP >= 7.0.X</b>
+			
+		<hr>
+		
+		
+
+<!-- <pre>	
+	#primaryContent a {
+		color: #someColor;
+	} 
+</pre>
+
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+
+		<p>I.E.</p>
+
+<pre>	#wrap #primaryContent a {
+		color: #someColor;
+	}
+</pre>
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+ -->
+		<h4 id="installation">B)&nbsp;<strong>Installation</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+
+		<p>
+			<b>Easy Installation Process</b> : Localhost<br>
+			<br>
+            <b>Set up Menorah Restaurant through the following steps:</b>
+            <br>
+            <br>
+            Unzip and copy the script folder in your localhost.<br>
+            Run the script path from any web browser. Ex : http://localhost/project_folder_name/install.<br>
+            Provide database settings.<br>
+            Run the installer.
+            <br>
+            <br>
+            <b>Easy Installation Process : Server</b>
+            <br>
+            </br>
+            <b>Set up Menorah Restaurant through the following steps:</b>
+            <br>
+            </br>
+            Unzip and copy the script folder in your root folder.<br>
+            Create Database , user, password and assign privileges to user of all database<br>
+            <img src="assets/img/install1_0.png" style="width: 100%" alt="Home" />
+		<br>
+		<br>
+            Note down the databse name, user name, password.<br>
+            Run the script path from any web browser. Ex : http://my-domain/install.<br>
+            Provide database settings.<br>
+            Run the installer.
+            <br>
+            <br>
+           <img src="assets/img/install1_1.png" style="width: 100%" alt="Home" /> 
+            After installing, Please remove Install folder in root<br>
+
+		</p> 
+
+		<!-- <p>The second file contains all of the specific stylings for the page. The file is separated into sections using:</p>  
+
+<pre>	/* === Header Section === */
+
+	some code
+
+	/* === Main Section === */
+	
+	some code
+	
+	/* === Sidebar Section === */
+	
+	some code
+	
+	/* === Footer === */
+	
+	some code
+	
+	etc, etc. 
+</pre>
+ -->		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+		<p>Any images that are placed within the blog section have 5px worth of padding and a light bluish background. If you would like to edit the display of these images, find the following section in the style sheet:</p>
+
+<!-- <pre>	#primaryContent #blog img {
+		change styles here:
+	}
+</pre> -->
+
+		<hr>
+		
+		<h4 id="home">C)&nbsp;<strong>Home</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<h5>Overview</h5>
+		<br>
+		
+		<p>The online food ordering system set up menu online and the customers easily places the order with a simple mouse click. Also with a food menu online you can easily track the orders, maintain customers database and improve your food delivery service. This system allows the user to select the desired food items from the displayed menu. The user orders the food items. The payment can be made online or pay-on-delivery system. The users details are maintained confidential because it maintains a separate account for each user. An id and password is provided for each user. Therefore it provides a more secured ordering.</p>
+
+		<img src="assets/img/home_0.png" style="width: 100%" alt="Home" />
+
+
+<!-- 		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>Most of the animation in this site is carried out from the customs scripts. There are a few functions worth looking over.
+<pre>	[some Javascript goes here...along with an general explanation]
+	[some Javascript goes here...along with an general explanation]
+	[some Javascript goes here...along with an general explanation]
+</pre>
+			</li>
+			<li>In addition to the custom scripts, I implement a few "tried and true" plugins to create the effects. This plugin is packed, so you won't need to manually edit anything in the file. The only necessary thing to know is how to call the method. For example:
+<pre>	[some Javascript goes here...along with an general explanation]</pre>
+			</li>
+		</ol> -->
+		
+		<hr>
+		
+		<h4 id="admindashboard">D)&nbsp;<strong>Admin Dashboard</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin have all the rights of Menorah Restaurant System.</p>
+		<br>
+		
+			<img src="assets/img/admin1_0.png" style="width: 100%" alt="Home" />
+		<br>
+		<br>
+		<p>Admin can Set Site Language</p>
+	    <p>Admin can Update his Account Details</p>
+         
+         <p> 
+         <img src="assets/img/admin1_1.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+         <img src="assets/img/admin39_0.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+         <b>Admin can view summary of orders in calendar</b>
+         <img src="assets/img/admin1_2.png" style="width: 100%" alt="Home" />
+      
+		</p>
+		
+		<hr>
+		
+		<h4 id="menu">E)&nbsp;<strong>Menu</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can Add,Update,Delete,Activate/De-Activate Menu.</p>
+		<br>
+		
+         <img src="assets/img/admin3.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin3_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+
+		<hr>
+		
+		<h4 id="items">F)&nbsp;<strong>Items</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can Add,Update,Delete,Activate/De-Activate an Item.</p>
+
+          <p>Add-ons, Options, Item types reflects here.</p>
+		<br>
+	<p>
+         <img src="assets/img/admin2.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin2_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+		<hr>
+		
+		<h4 id="addons">G)&nbsp;<strong>Add-ons</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can Add,Update,Delete,Activate/De-Activate an Item.</p>
+
+          <p>Add-ons, Options, Item types reflects here.</p>
+		<br>
+		<p>
+         <img src="assets/img/admin4.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin4_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+		<hr>
+		
+		<h4 id="options">H)&nbsp;<strong>Options</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can Add,Update,Delete,Activate/De-Activate Option.</p>
+
+          <p>Options reflects at the time of creating an Item.</p>
+		<br>
+		<p>
+         <img src="assets/img/admin5.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin5_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+		<hr>
+		
+		<h4 id="itemtypes">I)&nbsp;<strong>Item Types</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can Add,Update,Delete,Activate/De-Activate an Item type.</p>
+
+          <p>Item types reflects at the time of creating an Item.</p>
+		<br>
+		<p>
+         <img src="assets/img/admin6.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin6_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+
+		<hr>
+		
+		<h4 id="offers">J)&nbsp;<strong>Offers</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can Add,Update,Delete,Activate/De-Activate an Offer.</p>
+
+		<br>
+		<p>
+         <img src="assets/img/admin7.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin7_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+
+		<hr>
+		
+		<h4 id="users">K)&nbsp;<strong>Users</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Kitchen Managers</p>
+		<p>Admin can Create,Activate/De-Activate Kitchen Manager Account</p>
+		<p>When admin create kitchen manager, he will get be notified by Email</p>
+		<p>When customers placed an order, Admin can forward to Kitchen Manager</p>
+
+		<br>
+	<p>	
+         <img src="assets/img/admin8.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin8_1.png" style="width: 100%" alt="Home" />
+     
+
+      <br>
+       <p>Delivery Managers</p>
+		<p>Admin can Create,Activate/De-Activate Delivery Manager Account</p>
+		<p>Admin can allocate specific cities to Delivery Manager</p>
+		<p>When admin create Delivery manager, he will get be notified by Email</p>
+		<p>When customers placed an order, Admin or Kitchen Manager can forward to Delivery Manager with respective of his Allocated Cities</p>
+
+		<img src="assets/img/admin9.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin9_1.png" style="width: 100%" alt="Home" />
+
+     </p>
+		<hr>
+
+
+		<hr>
+		
+		<h4 id="customers">L)&nbsp;<strong>Customers</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can View,Activate/De-Activate Customers who Registered into this site.</p>
+
+		<br>
+		<p>
+         <img src="assets/img/admin10.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin10_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+
+
+		<hr>
+		
+		<h4 id="orders">M)&nbsp;<strong>Orders</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can view all Orders here.</p>
+		<p>New Orders : When customer place an order it comes under New Orders.</p>
+		<p>Under Process Orders: From New Order, Admin can update an order status as Processing and also assign Kitchen Manager.</p>
+		<p>Out to Deliver Orders: From Processing Order, Admin or Kitchen Manager can update an order status as Out to Deliver and also assign Delivery Manager with respective of his Allocated Cities.</p>
+		<p>Delivered Orders: From Out to Deliver, Admin or Delivery Manager can update an order status as Delivered.</p>
+		<p>Cancelled Orders: Admin can cancel an order.</p>
+		<p>When customer place an order, Admin will be notified by FCM notification.</p>
+
+		<br>
+		<p>
+         <img src="assets/img/admin11.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin11_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+
+				<hr>
+		
+		<h4 id="languagesettings">N)&nbsp;<strong>Language Settings</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>It is multilingual, Admin can add n number of Languages and set any language to site.</p>
+		
+		<br>
+		<p>
+         <img src="assets/img/admin12.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin12_1.png" style="width: 100%" alt="Home" />
+          <br>
+         <br>
+
+         <img src="assets/img/admin12_2.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+
+
+		<hr>
+		
+		<h4 id="loyalitypoints">O)&nbsp;<strong>Loyality Points</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can provide points to users.</p>
+		<p>If Enabled Point System is set to ON, then users will get points when registered,book an order, for first order etc...</p>
+		<p>Admin can set amount for earning point, redeeming point.</p>
+		<p>If Enable Redeeming is set to ON, then users can utilize earned points at the time of booking an order.</p>
+		
+		<br>
+	 <p>
+         <img src="assets/img/admin13_1.png" style="width: 100%" alt="Home" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin14.png" style="width: 100%" alt="Home" />
+          <br>
+         <br>
+
+         <img src="assets/img/admin14_1.png" style="width: 100%" alt="Home" />
+     </p> 
+		
+		<hr>
+
+
+
+		
+		<hr>
+		
+		<h4 id="referralsettings">P)&nbsp;<strong>Referral Settings</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can provide points to users by Referral concept.</p>
+		<p>If Referral Enabled is set to ON, then users can Refer his friends.</p>
+		<p>When they Register, users will get points.</p>
+		
+		<br>
+		<p>
+         <img src="assets/img/admin15_1.png" style="width: 100%" alt="Referral Settings" />
+         <br>
+         <br>
+
+         <img src="assets/img/admin16_1.png" style="width: 100%" alt="Referral Users" />
+          <br>
+         <br>
+
+     </p> 
+		
+		<hr>
+
+		
+
+		<hr>
+		
+		<h4 id="locationmaster">Q)&nbsp;<strong>Location Master</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Service Provide Locations.</p>
+		<p>Admin can Add,Update,Delete,Activate/De-Activate Localities (PINCODES) to which his Restaurant provide service.</p>
+		
+		<br>
+
+		<p>
+         <img src="assets/img/admin18_0.png" style="width: 100%" alt="Locations Cities" />
+         <br>
+         <br>
+         <img src="assets/img/admin18_1.png" style="width: 100%" alt="Locations Users" />
+          <br>
+         <br>
+
+     </p> 
+		
+		<hr>
+
+
+
+		<hr>
+		
+		<h4 id="mastersettings">R)&nbsp;<strong>Master Settings</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<h5>Site Settings</h5>
+		<p>Admin can set the settings which require for the site.</p>
+		
+		<br>
+
+	<p>
+         <img src="assets/img/admin19_0.png" style="width: 100%" alt="Site Settings" />
+         <br>
+         <br>
+         
+         <img src="assets/img/admin19_1.png" style="width: 100%" alt="Site Settings"/>
+         <br> 
+         <br> 
+
+         <img src="assets/img/admin19_2.png" style="width: 100%" alt="Site Settings"/>
+         <br>
+         <br>
+
+         <img src="assets/img/admin19_3.png" style="width: 100%" alt="Site Settings"/>
+         <br>
+         <br>
+
+         <h5>Paypal Settings</h5>
+         	<p>Admin can set the paypal settings</p>
+         	<img src="assets/img/admin20_0.png" style="width: 100%" alt="Paypal Settings" />
+         <br>
+         <br>
+
+          <h5>Email Settings</h5>
+          <p>Admin can set domain hosted server Email settings</p>
+         	<img src="assets/img/admin21_0.png" style="width: 100%" alt="Email Settings" />
+         <br>
+         <br>
+
+         <h5>Social Network Settings</h5>
+         	<p>Admin can set his Restaurant Social Networks here, which reflect in Front end</p>
+         	<img src="assets/img/admin22_0.png" style="width: 100%" alt="Social Network Settings" />
+         <br>
+         <br>
+
+         <h5>SEO Settings</h5>
+
+         	<p>Admin can set SEO Settings here</p>
+         	<img src="assets/img/admin23_0.png" style="width: 100%" alt="SEO Settings" />
+         <br>
+         <br>
+
+         <h5>Email Templates</h5>
+
+         	<p>Admin can update Email templates content here</p>
+         	<img src="assets/img/admin24_0.png" style="width: 100%" alt="Email Templates" />
+         	<img src="assets/img/admin24_1.png" style="width: 100%" alt="Email Templates" />
+         <br>
+         <br>
+
+         <h5>SMS Gateways</h5>
+
+         	<p>Admin can update SMS Gateways Credentials.</p>
+         	<img src="assets/img/admin25_0.png" style="width: 100%" alt="SEO Settings" />
+         <br>
+         <br>
+
+         <h5>SMS Templates</h5>
+
+         	<p>Admin can update SMS templates content.</p>
+         	<img src="assets/img/admin26_0.png" style="width: 100%" alt="SMS Templates" />
+         <br>
+         <br>
+
+         <h5>Pusher Notification Settings</h5>
+
+         	<p>Admin can set Pusher notification credentials here.</p>
+         	<img src="assets/img/admin27_0.png" style="width: 100%" alt="Pusher Notification Settings" />
+         <br>
+         <br>
+
+         <h5>Tinify Settings</h5>
+
+         	<p>Admin can enable Tinify for better resolution of Images.</p>
+         	<img src="assets/img/admin28_0.png" style="width: 100%" alt="Tinify Settings" />
+         <br>
+         <br>
+
+         <h5>Stripe Cards</h5>
+
+         	<p>Admin can Add,Update,Delete,Activate/De-Activate Strip Card, which reflect at the of booking an order.</p>
+         	<img src="assets/img/admin29_0.png" style="width: 100%" alt="Stripe Cards" />
+         <br>
+         <br>
+         <img src="assets/img/admin29_1.png" style="width: 100%" alt="Stripe Cards" />
+         <br>
+         <br>
+
+     </p> 
+		
+		<hr>
+		
+
+		<hr>
+		
+		<h4 id="reports">S)&nbsp;<strong>Reports</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Date Wise Reports.</p>
+		<p>Admin can get to know Orders Amount of specific time period.</p>
+		
+		<br>
+
+		<p>
+         <img src="assets/img/admin30_0.png" style="width: 100%" alt="Date Wise Reports" />
+         <br>
+         <br>
+
+         <p>Customer Wise Reports.</p>
+		<p>Admin can get to know Orders Amount of particular customer.</p>
+
+		<img src="assets/img/admin31_0.png" style="width: 100%" alt="Customer Wise Reports" />
+         <br>
+         <br>
+
+          <p>Location Wise Reports.</p>
+		<p>Admin can get to know Orders Amount of specific location.</p>
+
+		<img src="assets/img/admin32_0.png" style="width: 100%" alt="Location Wise Reports" />
+         <br>
+         <br>
+
+         <p>Item Wise Reports.</p>
+		<p>Admin can get to know Orders Amount of specific Item.</p>
+
+		<img src="assets/img/admin33_0.png" style="width: 100%" alt="Item Wise Reports" />
+         <br>
+         <br>
+
+     </p> 
+		
+		<hr>
+
+
+		<hr>
+		
+		<h4 id="pages">T)&nbsp;<strong>Pages</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can update content of Pages About Us, How It Works, Terms and Conditions and Privacy Policy.</p>
+		<p>All these pages reflects in front end.</p>
+		
+		<br>
+
+		<p>
+         <img src="assets/img/admin34_0.png" style="width: 100%" alt="Locations Cities" />
+         <br>
+         <br>
+         
+
+     </p> 
+		
+		<hr>
+
+
+
+
+		<hr>
+		
+		<h4 id="faqs">U)&nbsp;<strong>FAQS</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>Admin can Add,Update,Delete,Activate/De-Activate FAQs Categories and FAQs.</p>
+		<p>It will reflect in front end, FAQs page.</p>
+		
+		<br>
+
+		<p>
+         <img src="assets/img/admin35_0.png" style="width: 100%"/>
+         <br>
+         <br>
+          <img src="assets/img/admin35_1.png" style="width: 100%"/>
+         <br>
+         <br>
+          <img src="assets/img/admin36_0.png" style="width: 100%"/>
+         <br>
+         <br>
+          <img src="assets/img/admin36_1.png" style="width: 100%"/>
+         <br>
+         <br>
+         
+
+     </p> 
+		
+		<hr>
+
+
+
+		<hr>
+		
+		<h4 id="kitchenmanager">V)&nbsp;<strong>Kitchen Manager</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>When Admin forward an Order to Kitchen Manager, he will get FCM notification.</p>
+		<p>Kitchen Manager can view all the Orders which are sent by Admin.</p>
+		<p>Then, he can view order details, he can update order status as Out to Deliver and Assign Delivery Manager.</p>
+	<p>When Kitchen Manager forward an order to Delivery Manager, he will get FCM notification.</p>
+		
+		<br>
+
+		<p>
+         <img src="assets/img/admin37_0.png" style="width: 100%"/>
+         <br>
+         <br>
+          <img src="assets/img/admin37_1.png" style="width: 100%"/>
+         <br>
+         <br>
+          <img src="assets/img/admin37_2.png" style="width: 100%"/>
+         <br>
+         <br>
+          
+
+     </p> 
+		
+		<hr>
+
+
+
+			<hr>
+		
+		<h4 id="deliverymanager">W)&nbsp;<strong>Delivery Manager</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>When Admin or Kitchen Manager forward an Order to Delivery Manager, he will get FCM notification.</p>
+		<p>Delivery Manager can view all the Orders which are sent by Admin or Kitchen Managers.</p>
+		<p>Then, he can view order details, he can update order status as Delivered.</p>
+	<p>When Delivery Manager update an order status Delivered, Admin get FCM notification.</p>
+		
+		<br>
+
+		<p>
+         <img src="assets/img/admin38_0.png" style="width: 100%"/>
+         <br>
+         <br>
+          <img src="assets/img/admin38_1.png" style="width: 100%"/>
+         <br>
+         <br>
+          <img src="assets/img/admin38_2.png" style="width: 100%"/>
+         <br>
+         <br>
+          
+
+     </p> 
+		
+		<hr>
+
+
+
+		<hr>
+		
+		<h4 id="usersdashboard">X)&nbsp;<strong>User Dashboard</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>User can update his Account Details.</p>
+		
+		
+		<br>
+
+		<p>
+         <img src="assets/img/user.png" style="width: 100%" />
+         <br>
+         <br>
+         
+
+     </p> 
+		
+		<hr>
+
+
+		<hr>
+		
+		<h4 id="bookanorder">Y)&nbsp;<strong>Book an Order</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>User can add his desired Items (along with Addons) to Cart.</p>
+		
+		
+		<br>
+
+		<p>
+         <img src="assets/img/user1_0.png" style="width: 100%" />
+         <br>
+         <br>
+         <p>Then user can go to Checkout page, there he can provide Order Delivery Address and Payment type.</p>
+         <img src="assets/img/user1_1.png" style="width: 100%" />
+         <br>
+         <br>
+         <p>Then user can click on Continue button to book an order.</p>
+         <img src="assets/img/user1_2.png" style="width: 100%" />
+         <br>
+         <br>
+         <img src="assets/img/userone_3.png" style="width: 100%" />
+         <br>
+         <br>
+
+         
+
+     </p> 
+		
+		<hr>
+
+
+
+
+
+		<hr>
+		
+		<h4 id="myorders">Z)&nbsp;<strong>My Orders</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>User can view all his Orders here.</p>
+		
+		
+		<br>
+
+		<p>
+         <img src="assets/img/user2_0.png" style="width: 100%" />
+         <br>
+         <br>
+         <img src="assets/img/user2_1.png" style="width: 100%" />
+         <br>
+         <br>
+
+     </p> 
+		
+		<hr>
+
+
+		<hr>
+		
+		<h4 id="mypoints">AA)&nbsp;<strong>My Points</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>User can view his Point logs here.</p>
+		
+		
+		<br>
+
+		<p>
+         <img src="assets/img/user_points.png" style="width: 100%" />
+         <br>
+         <br>
+         
+
+     </p> 
+		
+		<hr>
+
+
+
+		<hr>
+		
+		<h4 id="changepassword">AB)&nbsp;<strong>Change Password</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>User can change his Account Password.</p>
+		
+		
+		<br>
+
+		<p>
+         <img src="assets/img/user_changepassword.png" style="width: 100%" />
+         <br>
+         <br>
+         
+
+     </p> 
+		
+		<hr>
+
+
+		<hr>
+		
+		<h4 id="myaddresses">AC)&nbsp;<strong>My Addresses</strong> - <a href="#toc"><i class="fa fa-arrow-up arrow-up"></i>top</a></h4>
+		
+		<p>User can view,Add,Delete,Set Default Address here.</p>
+		
+		
+		<br>
+
+		<p>
+         <img src="assets/img/user_address_0.png" style="width: 100%" />
+         <br>
+         <br>
+         <img src="assets/img/user_address_1.png" style="width: 100%" />
+         <br>
+         <br>
+         
+
+     </p> 
+		
+		<hr>
+
+
+
+
+
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
+  <!-- jquery link -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

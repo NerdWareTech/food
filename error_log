@@ -1,0 +1,66 @@
+[11-Oct-2017 10:21:43 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 05:46:57 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 05:47:00 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 05:47:15 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 05:47:17 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 07:24:16 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 07:24:18 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 07:24:31 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 07:24:40 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 07:24:49 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190
+[12-Oct-2017 07:25:08 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /home/conquero/public_html/foodcourt/system/core/Common.php on line 658 and defined in /home/conquero/public_html/foodcourt/system/core/Exceptions.php:190
+Stack trace:
+#0 /home/conquero/public_html/foodcourt/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown in /home/conquero/public_html/foodcourt/system/core/Exceptions.php on line 190

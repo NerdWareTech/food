@@ -261,7 +261,7 @@ class Items extends MY_Controller
             
             $this->form_validation->set_rules('item_name', get_languageword('item_name'), 'required|xss_clean');
             $this->form_validation->set_rules('item_cost', get_languageword('item_cost'), 'required|xss_clean');
-            $this->form_validation->set_rules('item_description', get_languageword('item_description'), 'required|max_length[100]|xss_clean');
+            $this->form_validation->set_rules('item_description', get_languageword('item_description'), 'required|max_length[1000]|xss_clean');
             
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
             
@@ -493,7 +493,7 @@ class Items extends MY_Controller
             
             $this->form_validation->set_rules('item_name', get_languageword('item_name'), 'required|xss_clean');
             $this->form_validation->set_rules('item_cost', get_languageword('item_cost'), 'required|xss_clean');
-            $this->form_validation->set_rules('item_description', get_languageword('item_description'), 'required|max_length[100]|xss_clean');
+            $this->form_validation->set_rules('item_description', get_languageword('item_description'), 'required|max_length[1000]|xss_clean');
             
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
             

@@ -16,12 +16,32 @@
 						 
                             <div class="row">
 							
-							
+							<?php
+								$val1='';
+								if(isset($record) && !empty($record))
+								{
+									$val1 = $record->menu_id;
+								}
+								else if(isset($_POST))
+								{
+									$val1 = set_value('menu_id');
+								}
+							?>
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><?php echo get_languageword('item_details');?></a></li>
 
 					<li role="presentation"><a href="#options" aria-controls="options" role="tab" data-toggle="tab"><?php echo get_languageword('options');?></a></li>
+					<?php
+					if($val1 ==21)
+					{
+						echo '<li role="presentation"><a href="#pizzaoptions" aria-controls="pizzaoptions" role="tab" data-toggle="tab">Pizza Options</a></li>
+						';
+					}
+					?>
+					
+					
+				
 				</ul>	
 				<!-- Nav tabs -->			
 						
@@ -318,6 +338,163 @@
                   </div>
 
                 </div>
+
+				<div role="tabpanel" class="tab-pane" id="pizzaoptions">
+				<!--<p>Pizza Options</p>-->
+				<br/>
+
+				<div class="col-md-12">
+
+
+
+<div class="col-md-4">
+
+  <label><?php echo get_languageword('Category Name : ');?><span style="color:red;">*</span></label>
+
+  <?php echo form_open('items/Pizza/addCategory'); ?>
+  <input type="text" name="name" class="form-control"/>
+<input type="hidden" value="<?php echo $value ?>" name="id"/><br/>
+<input type="submit"  class="btn btn-primary"  value="Add Category">
+<?php echo form_close(); ?>
+
+</div>
+
+<div class="col-md-4" style="margin-top:25px;">  
+
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Category</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+	<?php
+ $this->db->select("id,name"); 
+ $this->db->from('cr_pizzacategories');
+ $this->db->where('item_id', $value);
+ $query = $this->db->get();
+$dataResult = $query->result();
+
+foreach($dataResult as $row){?>
+
+			
+<?php echo form_open('items/Pizza/deleteCategory'); ?>
+			<tr>
+				<td><?php echo $row->name; ?></td>
+				<td>
+				<input type="hidden" name="category" value="<?php echo $row->id; ?>"/>
+				<button type="submit" class="btn btn-danger"> <span class="fa fa-remove"></span></button>
+				</td>
+			</tr>
+<?php echo form_close(); ?>
+
+ <?php }?>
+	
+  </table>
+</div>
+
+ 
+</div>
+<br/>
+
+<div class="col-md-12" style="margin-top:25px;padding-left:0px;">  
+<hr/>
+<div class="col-md-4" style="margin-left:0px;">
+<?php echo form_open('items/Pizza/addRadio'); ?>
+<select name="category" class="form-control">
+<option selected disabled>--------Select Category--------</option>
+<?php
+ $this->db->select("id,name"); 
+ $this->db->from('cr_pizzacategories');
+ $this->db->where('item_id', $value);
+ $query = $this->db->get();
+$dataResult = $query->result();
+
+foreach($dataResult as $row){?>
+
+			<option value="<?php echo $row->id; ?>"><?php echo $row->name; ?></option>
+
+ <?php }?>
+ </select>
+ <br/>
+
+ </div >
+
+ <div class="col-md-6" >
+
+
+
+  
+
+ <div class="col-md-5">
+ 
+  <input type="text"  class="form-control" name="name"   placeholder="Name" value="">
+  </div>
+  <div class="col-md-4">
+  <input class="form-control " type="text" name="price"  placeholder="Price" value="">
+  <input type="hidden" value="<?php echo $value ?>" name="id"/><br/>
+  </div>
+  <div class="col-md-3">
+  <input type="submit"   class="btn btn-success"   value="Add Option">
+
+  <?php echo form_close(); ?>
+  </div>
+
+
+
+ </div>
+ <hr/>
+ <div class="col-md-12">
+ <table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+		<th>Action</th>
+      </tr>
+    </thead>
+	<?php
+ $this->db->select("id,name,price"); 
+ $this->db->from('cr_radiobuttons');
+ $this->db->where('item_id', $value);
+ $query = $this->db->get();
+$dataResult = $query->result();
+
+foreach($dataResult as $row){?>
+
+			
+
+			<tr>
+				
+				<td><?php echo $row->name; ?></td>
+				<td><?php echo $row->price; ?></td>
+
+				<td>
+				<button class="btn btn-danger"> <span class="fa fa-remove"></span> Delete</button>
+				</td>
+			</tr>
+
+ <?php }?>
+	
+  </table>
+ </div>
+
+ 
+</div>
+
+
+
+
+
+<?php echo form_close(); ?>
+
+</div>
+				<!--Pizza-->
+
+
+				</div>
 				
 				 
                             </div>

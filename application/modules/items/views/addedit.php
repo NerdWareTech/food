@@ -152,7 +152,7 @@
 						}
 						
 						$element = array('name'=>'item_description',
-						'value'=>$val,												'maxlength'=>'500',
+						'value'=>$val,												'maxlength'=>'100',
 						'class'=>'form-control');
 						echo form_textarea($element).form_error('item_description');
 						?>

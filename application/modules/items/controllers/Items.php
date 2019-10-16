@@ -175,6 +175,10 @@ class Items extends MY_Controller
      *
      * @return array
      **/ 
+
+     public function getdata() {
+        print_r($this->input->post('name'));
+     }
     function ajax_get_list()
     {
         if ($this->input->is_ajax_request()) {
@@ -248,6 +252,16 @@ class Items extends MY_Controller
       *
       * @return boolean
       **/ 
+
+    function pizza()
+    {
+        $name = $_POST['_name'];
+         $item_id = $_POST['id'];
+        echo "Name : ";
+        echo $name;
+        echo "Item ID : \n";
+        echo $item_id;
+    }  
     function add_item()
     {
         if (isset($_POST['addedit_item'])) {
@@ -261,7 +275,7 @@ class Items extends MY_Controller
             
             $this->form_validation->set_rules('item_name', get_languageword('item_name'), 'required|xss_clean');
             $this->form_validation->set_rules('item_cost', get_languageword('item_cost'), 'required|xss_clean');
-            $this->form_validation->set_rules('item_description', get_languageword('item_description'), 'required|max_length[1000]|xss_clean');
+            $this->form_validation->set_rules('item_description', get_languageword('item_description'), 'required|max_length[100]|xss_clean');
             
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
             
@@ -493,7 +507,7 @@ class Items extends MY_Controller
             
             $this->form_validation->set_rules('item_name', get_languageword('item_name'), 'required|xss_clean');
             $this->form_validation->set_rules('item_cost', get_languageword('item_cost'), 'required|xss_clean');
-            $this->form_validation->set_rules('item_description', get_languageword('item_description'), 'required|max_length[1000]|xss_clean');
+            $this->form_validation->set_rules('item_description', get_languageword('item_description'), 'required|max_length[100]|xss_clean');
             
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
             

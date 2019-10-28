@@ -226,6 +226,8 @@ function updateToCart() {
 // ADD TO CART function
 function addToCart(ref)
 {
+	
+	
 	var message  = "";
 	
 	
@@ -270,6 +272,52 @@ function addToCart(ref)
 		}
 		
 		
+		
+		var total = document.getElementById('total').value;
+		var first;
+		var second;
+		var third;
+		var fourth;
+		var fifth;
+		var data = [null,null,null,null,null];
+
+		if($("input:radio[name=cat0]:checked").val())
+		{
+			first = $("input:radio[name=cat0]:checked").val()
+			document.cookie = "first="+first;
+		}
+		if($("input:radio[name=cat1]:checked").val())
+		{
+			second = $("input:radio[name=cat1]:checked").val()
+			document.cookie = "second="+second;
+		}
+		if($("input:radio[name=cat2]:checked").val())
+		{
+			third = $("input:radio[name=cat2]:checked").val()
+			document.cookie = "third="+third;
+		}
+		if($("input:radio[name=cat3]:checked").val())
+		{
+			fourth = $("input:radio[name=cat3]:checked").val()
+			document.cookie = "fourt="+fourth;
+		}
+		if($("input:radio[name=cat4]:checked").val())
+		{
+			fifth= $("input:radio[name=cat4]:checked").val()
+			document.cookie = "fifth="+fifth;
+		}
+		data = [first,second,third,fourth,fifth];
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		//Prepare Add-ons array
 		$('.dm-add-qty input:checked').each(function() {
 			
@@ -277,6 +325,8 @@ function addToCart(ref)
 			
 		});
 	}
+	
+	
 	
 	
 	var quantity=1;
@@ -297,7 +347,7 @@ function addToCart(ref)
 	
 	$("body").addClass("ajax-load");
 	
-	$.post(targeturl, { item_id: item_id, quantity: quantity, item_option_id: item_option_id, addon_ids: addon_ids, csrf_digi_name: token, ajax: '1',item_from:itemFrom },
+	$.post(targeturl, {pizza:data, item_id: item_id, quantity: quantity, item_option_id: item_option_id, addon_ids: addon_ids, csrf_digi_name: token, ajax: '1',item_from:itemFrom },
 		function(data) {
 
 			$("body").removeClass("ajax-load");
@@ -316,7 +366,7 @@ function addToCart(ref)
 				
 				load_cart_div();
 				
-			    message = "Item successfully added to your cart";
+			    message = "Item successfully added to your";
 			    checkNotify('CART',message,'success');
 				
  			} else if (data!=999 && data<=0) {
@@ -345,12 +395,14 @@ function addOfferToCart() {
 	var itemFrom   = '';
 	var item_id	   = 0;
 	var item_cost  = 0;
-	
+	console.log("Offer to Cart");
 	var modl = "#offr-modal";
 	
 	item_id 	= $(""+modl+" #selected_offer_id").val();
 	item_cost 	= $(""+modl+" #selected_offer_price").val();
 	itemFrom    = $(""+modl+" #itemFrom").val();
+
+
 		
 	if (itemFrom=='offers' && item_id>0) {
 		
@@ -386,7 +438,7 @@ function addOfferToCart() {
 				
 				load_cart_div();
 				
-				message = "Item successfully added to your cart";
+				message = "Item successfully added to your";
 				checkNotify('CART',message,'success');
 				
 			} else if (data!=999 && data<=0) {

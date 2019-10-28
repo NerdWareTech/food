@@ -129,10 +129,13 @@ class Cart extends MY_Controller
      **/  
     function add_cart_item()
     {
+       
+        
         $model_fun = 'validate_add_cart_item';
 
         if ($this->input->post('item_from') != '' && $this->input->post('item_from')=='offers') {
             $model_fun = 'validate_add_cart_offer';
+        
         }
 
         
@@ -484,7 +487,7 @@ class Cart extends MY_Controller
                     }
                     //If Points Redeemed, log the data & update user points - End
                     
-                    
+                   
 
                     $products_data     = array();
                     $addons_data    = array();
@@ -492,7 +495,7 @@ class Cart extends MY_Controller
                     $offer_products_data=array();
                    
                     if ($this->cart->contents()) {
-                        
+                        $final_cost = "";
                         foreach ($this->cart->contents() as $items) {
                             
                             $common_id = random_string('numeric', 2);
@@ -500,7 +503,7 @@ class Cart extends MY_Controller
                             if ($items['options']['is_offer'] == 0) {
                                 
                                 //Start 
-                                $final_cost = "";
+                                
                                 if (!empty($items['options']['item_option_price'])) {
                                     $final_cost = (($items['options']['item_option_price'])*$items['qty']);//items_cost
                                 } else if (!empty($items['options']['item_cost'])) {
@@ -512,7 +515,7 @@ class Cart extends MY_Controller
                                     $final_cost += $items['options']['addons_cost_per_item'];//items_cost+addons_cost
                                 }
                                 //End 
-                            
+                                
                             
 
                                 array_push(
@@ -559,7 +562,7 @@ class Cart extends MY_Controller
                                     );
                                 }
                             }
-
+                            //header('Location:index.php');
 
                             //Prepare Offer Data
                             if ($items['options']['is_offer'] == 1) {
@@ -618,7 +621,103 @@ class Cart extends MY_Controller
                             }
                         }
                         
-                        
+                        if(isset($_COOKIE['first']))
+                                {
+                                    $firstdata = array('radio_selected'=> $_COOKIE['first'],'order_id'=>$order_id);
+                                    $this->db->insert('cr_order_pizza',$firstdata);
+                                    setcookie('first',"", time() - 3600);
+            
+                                    $pr1 =0;
+                                    $this->db->select('price');
+                                    $this->db->from('cr_radiobuttons');
+                                    $this->db->where('id', $_COOKIE['first'] );
+                                    $query = $this->db->get();
+                                    
+                                    foreach ($query->result() as $row)
+                                    {
+                                       $pr1 = $row->price;
+                                    }
+                                    $this->db->where('order_id',$order_id);
+                                    $this->db->Set('total_cost','total_cost + ' .(int) $pr1,FALSE);
+                                    $this->db->update('cr_orders');
+                                }
+                                if(isset($_COOKIE['second']))
+                                {
+                                    $firstdata = array('radio_selected'=> $_COOKIE['second'],'order_id'=>$order_id);
+                                    $this->db->insert('cr_order_pizza',$firstdata);
+                                    setcookie('second',"", time() - 3600);
+
+                                    $pr2 =0;
+                                    $this->db->select('price');
+                                    $this->db->from('cr_radiobuttons');
+                                    $this->db->where('id', $_COOKIE['second'] );
+                                    $query = $this->db->get();
+                                    foreach ($query->result() as $row)
+                                    {
+                                       $pr2 = $row->price;
+                                    }
+                                    $this->db->where('order_id',$order_id);
+                                    $this->db->Set('total_cost','total_cost + ' .(int) $pr2,FALSE);
+                                    $this->db->update('cr_orders');
+                                }
+                                if(isset($_COOKIE['third']))
+                                {
+                                    $firstdata = array('radio_selected'=> $_COOKIE['third'],'order_id'=>$order_id);
+                                    $this->db->insert('cr_order_pizza',$firstdata);
+                                    setcookie('third',"", time() - 3600);
+                                    $pr3 =0;
+                                    $this->db->select('price');
+                                    $this->db->from('cr_radiobuttons');
+                                    $this->db->where('id', $_COOKIE['third'] );
+                                    $query = $this->db->get();
+                                    
+                                    foreach ($query->result() as $row)
+                                    {
+                                       $pr3 = $row->price;
+                                    }
+                                    $this->db->where('order_id',$order_id);
+                                    $this->db->Set('total_cost','total_cost + ' .(int) $pr3,FALSE);
+                                    $this->db->update('cr_orders');
+                                }
+                                if(isset($_COOKIE['fourth']))
+                                {
+                                    $firstdata = array('radio_selected'=> $_COOKIE['fourth'],'order_id'=>$order_id);
+                                    $this->db->insert('cr_order_pizza',$firstdata);
+                                    setcookie('fourth',"", time() - 3600);
+
+                                    $pr4 =0;
+                                    $this->db->select('price');
+                                    $this->db->from('cr_radiobuttons');
+                                    $this->db->where('id', $_COOKIE['fourth'] );
+                                    $query = $this->db->get();
+                                    
+                                    foreach ($query->result() as $row)
+                                    {
+                                       $pr4 = $row->price;
+                                    }
+                                    $this->db->where('order_id',$order_id);
+                                    $this->db->Set('total_cost','total_cost + ' .(int) $pr4,FALSE);
+                                    $this->db->update('cr_orders');
+                                }
+                                if(isset($_COOKIE['fifth']))
+                                {
+                                    $firstdata = array('radio_selected'=> $_COOKIE['fifth'],'order_id'=>$order_id);
+                                    $this->db->insert('cr_order_pizza',$firstdata);
+                                    setcookie('fifth',"", time() - 3600);
+                                    $pr5 =0;
+                                    $this->db->select('price');
+                                    $this->db->from('cr_radiobuttons');
+                                    $this->db->where('id', $_COOKIE['fifth'] );
+                                    $query = $this->db->get();
+                                    
+                                    foreach ($query->result() as $row)
+                                    {
+                                       $pr5 = $row->price;
+                                    }
+                                    $this->db->where('order_id',$order_id);
+                                    $this->db->Set('total_cost','total_cost + ' .(int) $pr5,FALSE);
+                                    $this->db->update('cr_orders');
+                                }
                         
                         if (!empty($products_data)) {
                             $this->db->insert_batch(TBL_PREFIX.TBL_ORDER_PRODUCTS, $products_data);
@@ -633,12 +732,14 @@ class Cart extends MY_Controller
                         if (!empty($offer_products_data)) {
                             $this->db->insert_batch(TBL_PREFIX.TBL_ORDER_OFFER_PRODUCTS, $offer_products_data);
                         }
+
+                        
                         
                     }
                     
                     
-                    
-                    // send push notification to the admin
+                                        
+// send push notification to the admin
                     if ($this->config->item('site_settings')->pusher_status=='Yes') {
                         $this->load->library('Pusher');
                         $options = array(
@@ -650,6 +751,9 @@ class Cart extends MY_Controller
                         $notfn_data['order_id'] = $order_id;
                         $pusher->trigger('my-channel', 'my_event', $notfn_data); 
                     }
+                    
+                    
+                    
                 
 
                     

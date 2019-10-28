@@ -14,9 +14,11 @@
                <div class="row">
 			   
 			   <?php foreach ($items as $item) {?>
+
+				
                 <div class="col-sm-6">
                     <div class="cs-card mb-3 cs-product-card">
-					
+				
                         <img src="<?php echo get_item_image($item->item_image_name);?>" alt="<?php echo $item->item_name;?>" class="img-responsive" title="<?php echo $item->item_name;?>">
                         <div class="cs-card-content clearfix">
                             
@@ -41,7 +43,7 @@
 								<?php endif;?>
 							</div>
                             
-							
+							 
                             <div class="pull-right">
 							<!---add to cart/choose addons,items-->
 							

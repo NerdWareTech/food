@@ -12,6 +12,7 @@
 							$currency = $this->config->item('site_settings')->currency_symbol;
 							
 							$count = count($order_products)+count($order_offers);
+							$oid = null;
 							?>
 							
 							<a title="<?php echo get_languageword('go_to_list'); ?>" class="btn btn-primary btn-xs pull-right" href="<?php echo URL_ORDERS_INDEX.$order->status;?>"><i class="fa fa-list"></i>
@@ -163,11 +164,17 @@
 					</tr>
 					</thead>
 					
-					<?php if(isset($order_products) && !empty($order_products)) { ?>
+					<?php 
+					$pizza = false;
+					if(isset($order_products) && !empty($order_products)) { ?>
 					<tbody>
 					<?php 
 						$i=0;
 						foreach($order_products as $product):
+							if($product->menu_id==21)
+							{
+								$pizza = true;
+							}
 						$i++;?>
 					<tr>
 						<td><?php echo $i;?></td>
@@ -295,6 +302,75 @@
 					</table>
 				</div>						<?php } ?>
 						<!--ORDER OFFERS-->
+
+
+
+						<!--PIZZA ITEMS-->
+						<h3><?php echo get_languageword('Pizza Addons');?></h3>
+						
+						<?php
+						if($pizza)
+						{
+							
+						
+						?>
+						<div class="table-responsive table1">
+					<table cellspacing="10" width="100%" id="example" class="display responsive nowrap" border="1">
+					<thead>
+					<tr>
+						<th>#</th>
+						<th><?php echo get_languageword('Category');?></th>
+						<th><?php echo get_languageword('Option');?></th>
+						<th><?php echo get_languageword('Cost');?></th>
+						
+					</tr>
+					</thead>
+					
+					<?php if(isset($order_products) && !empty($order_products)) { ?>
+					<tbody>
+					<?php 
+						$this->db->select('*');
+						$this->db->from('cr_order_pizza');
+						$this->db->where('order_id',$order->order_id );
+						$query = $this->db->get();
+						foreach ($query->result() as $row)
+						{
+							$this->db->select('*');
+							$this->db->from('cr_radiobuttons');
+							$this->db->where('id',$row->radio_selected );
+							$query1 = $this->db->get();
+
+							foreach($query1->result() as $row1)
+							{
+								$this->db->select('name');
+							$this->db->from('cr_pizzacategories');
+							$this->db->where('id',$row1->id_Categories );
+							$query12 = $this->db->get();
+							foreach($query12->result() as $row2)
+							{
+								$catName = $row2->name;
+							}
+								echo '<tr>
+								<td>1</td>
+								<td>'.$catName.'</td>
+								<td>'.$row1->name.'</td>
+								<td>'.$currency.$row1->price.'</td>
+								
+								
+							</tr>';
+							}
+
+
+						}
+						
+						?>
+					
+				
+					</tbody>
+					<?php }} ?>	
+					</table>
+				</div>
+						<!--PIZZA ITEMS-->
 						
 						
                     </div>

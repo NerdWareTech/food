@@ -230,6 +230,12 @@ class Orders extends MY_Controller
         $this->data['order_addons']        = $order_addons;
         $this->data['order_offers']        = $order_offers;
         
+        if($order_products->menu_id==21)
+        {
+            setcookie('YesPiza',"Yes", time() + 3600);
+        }
+       
+        
         if ($order->status == 'new' || $order->status == 'process') {
             $kitchen_managers = $this->base_model->get_users_options(3);
             $this->data['kitchen_managers'] = $kitchen_managers;

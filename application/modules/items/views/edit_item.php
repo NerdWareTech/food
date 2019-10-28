@@ -466,15 +466,18 @@ foreach($dataResult as $row){?>
 
 			
 
+			
+
+			<?php echo form_open('items/Pizza/deleteRadio'); ?>
 			<tr>
-				
 				<td><?php echo $row->name; ?></td>
 				<td><?php echo $row->price; ?></td>
-
 				<td>
-				<button class="btn btn-danger"> <span class="fa fa-remove"></span> Delete</button>
+				<input type="hidden" name="id" value="<?php echo $row->id; ?>"/>
+				<button type="submit" class="btn btn-danger"> <span class="fa fa-remove"></span></button>
 				</td>
 			</tr>
+<?php echo form_close(); ?>
 
  <?php }?>
 	

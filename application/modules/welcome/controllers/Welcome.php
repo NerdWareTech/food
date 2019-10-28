@@ -660,6 +660,8 @@ class Welcome extends MY_Controller
      *
      * @return array
      **/
+
+    
     function get_item_addons_options() 
     {
         
@@ -780,11 +782,84 @@ class Welcome extends MY_Controller
 								</div>';
                     }
                  
+                 $page .= "<style>
+                 
+                 .form-radio
+{
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     border-radius: 50px;
+     font-weight:bold;
+     font-size:20px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+.form-radio:checked::before
+{
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '✓';
+    
+}
+.form-radio:hover
+{
+     background-color: #f7f7f7;
+}
+.form-radio:checked
+{
+     background-color: #f1f1f1;
+}
+                 </style>";
+                 
+                    $this->db->select("id,name"); 
+                    $this->db->from('cr_pizzacategories');
+                    $this->db->where('item_id', $item_id);
+                    $query = $this->db->get();
+                   $dataResult = $query->result();
+                   $num = 0;
+                   foreach($dataResult as $row){
+
+                   
+
+
+                    $page .= '<div class="custom-control custom-radio">
+                    <label class="custom-control-label" for="'.$row->id.'">'.$row->name.'</label>
+                  </div><br/>';
+                   
+
+                   $this->db->select("id,name,price"); 
+                   $this->db->from('cr_radiobuttons');
+                   $this->db->where('id_Categories', $row->id);
+
+                   $query1 = $this->db->get();
+                   $dataResult1 = $query1->result();
+                   foreach($dataResult1 as $row1){
+
+                    $page .= '<input style="margin-left:20px;" value="'.$row1->id.'" type="radio" name="cat'.$num.'" id="'.$row1->id.'"/>
+                    <label style="margin-left:20px;" class="custom-control-label" for="'.$row1->id.'">'.$row1->name.' (+'.$row1->price.')</label><br/>';
+                   }
+                   $page .="<hr/>";
+                   $num++;
+                }
+
+                $page .='<input type="hidden" id="total" name="total" value="'.$num.'"/>';
+                   
                  
                  
-                 
-                 
-                 
+               
                     echo $page;
                     
                 } else {

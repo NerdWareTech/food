@@ -306,8 +306,9 @@ function addToCart(itemFrom)
  			if(data >= 0) {
 
 				$('#items_cnt').text(data);
-
-			    message = "Item successfully added to your cart";
+				alert("New");
+				console.log("New");
+			    message = "Item successfully added to your ";
 			    alertify.success(message);
 				$("#test_Modal").modal('hide');
  			} else {

@@ -937,7 +937,34 @@ function get_adns_options(item_id) {
 	}
 }
 
-
+function get_pizza_options(item_id) {
+	
+	if (item_id>0) {
+		
+		$("#adons-options-block").empty();
+		$('#addons-options-modal').modal('hide');
+		
+		$("body").addClass("ajax-load");
+		$.ajax({
+		url:'<?php echo base_url();?>welcome/get_item_addons_options',
+		type:'POST',
+		data: '<?php echo $this->security->get_csrf_token_name();?>=<?php echo $this->security->get_csrf_hash();?>&item_id='+item_id,
+		success :function(response){
+			
+			$("body").removeClass("ajax-load");
+			if (response!='') {
+				$("#adons-options-block").html(response);
+			
+				$('#addons-options-modal').modal('show');
+			} else {
+				$("#adons-options-block").empty();
+				$('#addons-options-modal').modal('hide');
+			}
+		}
+	});
+		
+	}
+}
 function get_cart_itm_adns_options(item_id) {
 	
 	

@@ -60,6 +60,15 @@ class Pizza extends CI_Controller
       {
         $catID= $this->input->post('category');
         $this->db->delete('cr_radiobuttons', array('id_categories' => $catID));
-        $this->db->delete('cr_pizzacategories', array('id' => $catID)); 
+        $this->db->delete('cr_pizzacategories', array('id' => $catID));
+        
+        header('location:'.$_SERVER['HTTP_REFERER']);
+      }
+
+      function deleteRadio() 
+      {
+        $catID= $this->input->post('id');
+        $this->db->delete('cr_radiobuttons', array('id' => $catID));
+        header('location:'.$_SERVER['HTTP_REFERER']);
       }
 }
